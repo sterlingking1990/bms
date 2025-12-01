@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Brandible</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .legal-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .legal-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .legal-hero p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+
+        .legal-content {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .legal-section {
+            margin-bottom: 40px;
+        }
+
+        .legal-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #7c3aed;
+            padding-bottom: 10px;
+        }
+
+        .legal-section p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .legal-section ul {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+
+        .legal-section li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Brandible</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+                <a href="terms-conditions.html" class="nav-link">Terms & Conditions</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="legal-hero">
+        <div class="container">
+            <h1>Account Deletion</h1>
+            <p>Request the permanent deletion of your account and data.</p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <div class="legal-container">
+            <div id="delete-account" class="legal-section">
+                <h2>Request Account Deletion</h2>
+                <p>
+                    Use the form below to request the permanent deletion of your Brandible account. Please read the following information carefully before proceeding:
+                </p>
+                <ul>
+                    <li><strong>This action is irreversible.</strong> Once your account is deleted, it cannot be recovered.</li>
+                    <li>All data associated with your account will be permanently deleted, including your profile information, activities, and any content you have created.</li>
+                    <li>We will not retain any of your personal data after the deletion process is complete.</li>
+                    <li>You will lose all access to the Brandible app and its services. To use Brandible again, you will need to create a new account.</li>
+                    <li>Account deletion requests are processed within 48 hours on business days (Monday - Friday).</li>
+                </ul>
+                <p>
+                    To proceed, please enter the email address associated with your Brandible account and click "Submit Request". This will open your default email client with a pre-filled message to our support team.
+                </p>
+                <form id="delete-request-form" class="contact-form" style="margin-top: 30px;">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Enter your account email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Brandible</span>
+                    </div>
+                    <p>Transforming corporate marketing through authentic micro-influencer partnerships and performance-based campaigns.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="index.html#contact">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Brandible Marketing Solutions. All rights reserved.</p>
+                    <p>Proudly Nigerian 🇳🇬</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('delete-request-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const subject = 'Account Deletion Request';
+            const body = `Please delete the Brandible account associated with the following email address: ${email}. I understand that this action is irreversible and will result in the permanent deletion of all my data.`;
+            window.location.href = `mailto:izundukingsleyemeka@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+    </script>
+</body>
+</html>
