@@ -48,8 +48,8 @@ function openAppOrFallback() {
     if (isMobileDevice()) {
         // Try multiple deep link formats
         const deepLinks = [
-            'brandiblebms://', // Custom scheme
-            'intent://app#Intent;scheme=brandiblebms;package=com.brandiblebms.app;end', // Android Intent
+            'brandible://', // Custom scheme
+            'intent://app#Intent;scheme=brandible;package=com.brandiblebms.app;end', // Android Intent
             'https://brandiblebms.com' // Fallback to website
         ];
         
@@ -166,7 +166,7 @@ function initNavbarScroll() {
 // Function to open the app or redirect to the Play Store
 function openOrDownloadApp() {
     // Attempt to open the app using its custom URL scheme
-    window.location.href = 'brandiblebms://app';
+    window.location.href = 'brandible://app';
 
     // Set a timeout to redirect to the Play Store if the app doesn't open
     setTimeout(function() {
