@@ -2,6 +2,17 @@ plugins = []
 headers = []
 redirects = []
 
+# Form submission settings
+[[plugins]]
+package = "@netlify/plugin-forms"
+
+[plugins.inputs]
+  # Configure form notifications
+  [plugins.inputs.settings]
+    # Email notifications for form submissions
+    [plugins.inputs.settings.notifications]
+      emails = ["sales@brandiblebms.com", "agents@brandiblebms.com"]
+
 [functions]
 
 [functions."*"]

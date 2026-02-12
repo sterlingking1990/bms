@@ -450,8 +450,55 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cta-button-container">
-                        <a href="#get-started" class="btn btn-primary btn-large">Become a Brandible Agent</a>
+                    <div class="agent-registration-form">
+                        <h3>Join as a Brandible Agent</h3>
+                        <form class="contact-form" name="agent-registration" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/agent-success.html">
+                            <input type="hidden" name="form-name" value="agent-registration">
+                            <input type="hidden" name="subject" value="New Agent Registration - Brandible">
+                            <p style="display:none;">
+                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                            </p>
+                            <div class="form-group">
+                                <input type="text" id="agent-name" name="agent-name" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="agent-email" name="agent-email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="agent-phone" name="agent-phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="brand-industry" name="brand-industry" required>
+                                    <option value="">Select Brand Industry to Promote</option>
+                                    <option value="fashion">Fashion & Apparel</option>
+                                    <option value="electronics">Electronics & Gadgets</option>
+                                    <option value="electricals">Electrical Appliances</option>
+                                    <option value="beauty">Beauty & Cosmetics</option>
+                                    <option value="food-beverage">Food & Beverage</option>
+                                    <option value="health-wellness">Health & Wellness</option>
+                                    <option value="home-furniture">Home & Furniture</option>
+                                    <option value="automotive">Automotive</option>
+                                    <option value="education">Education & Training</option>
+                                    <option value="real-estate">Real Estate</option>
+                                    <option value="fintech">FinTech & Financial Services</option>
+                                    <option value="entertainment">Entertainment & Events</option>
+                                    <option value="sports-fitness">Sports & Fitness</option>
+                                    <option value="technology">Technology & Software</option>
+                                    <option value="travel-hospitality">Travel & Hospitality</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="agent-experience" name="agent-experience" placeholder="Tell us about your social media presence and why you want to become a Brandible Agent (optional)" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Become a Brandible Agent</button>
+                        </form>
+                        <div class="form-note">
+                            <p><i class="fas fa-shield-alt"></i> Your information is secure. We'll contact you within 48 hours with next steps to get started.</p>
+                            <p style="margin-top: 15px; text-align: center;">
+                                <small>Questions? Email us at: <a href="mailto:agents@brandiblebms.com?subject=Agent Program Inquiry" style="color: #ffd700; font-weight: 600;">agents@brandiblebms.com</a></small>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -653,7 +700,12 @@
                 </div>
                 <div class="get-started-form">
                     <h3>Start Your Campaign Today</h3>
-                    <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
+                        <input type="hidden" name="form-name" value="contact">
+                        <input type="hidden" name="subject" value="New Strategy Session Request - Brandible">
+                        <p style="display:none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
                         <div class="form-group">
                             <input type="text" id="company-name" name="company-name" placeholder="Company Name" required>
                         </div>
@@ -682,6 +734,9 @@
                     </form>
                     <div class="form-note">
                         <p><i class="fas fa-shield-alt"></i> Your information is secure and confidential. We'll contact you within 24 hours to schedule your consultation.</p>
+                        <p style="margin-top: 15px; text-align: center;">
+                            <small>Or email us directly at: <a href="mailto:sales@brandiblebms.com?subject=Strategy Session Request&body=Hi Brandible Team,%0D%0A%0D%0AI would like to book a strategy session to discuss how Brandible can help grow my business.%0D%0A%0D%0ACompany Name:%0D%0AContact Name:%0D%0APhone Number:%0D%0ABudget Range:%0D%0A%0D%0AThank you!" style="color: #667eea; font-weight: 600;">sales@brandiblebms.com</a></small>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -735,7 +790,7 @@
                     <div class="contact-info">
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>+234 (0) 91 156 94190</span>
+                            <span>+234 (0) 90 156 94190</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
