@@ -13,31 +13,60 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 1000;
+            z-index: 10000; /* Increased z-index */
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(0,0,0,0.6); /* Slightly darker background */
+            padding-top: 50px; /* Better for mobile */
         }
 
         .modal-content {
             background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
+            margin: 5% auto;
+            padding: 30px 20px;
+            border: none;
+            width: 90%;
+            max-width: 450px;
             text-align: center;
-            border-radius: 10px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .modal-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .modal-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 25px;
         }
 
         .close {
+            position: absolute;
+            right: 15px;
+            top: 10px;
             color: #aaa;
-            float: right;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
+            line-height: 1;
+        }
+
+        @media (max-width: 480px) {
+            .modal-content {
+                width: 95%;
+                padding: 25px 15px;
+                margin: 20% auto;
+            }
+            .modal-content h2 {
+                font-size: 1.3rem;
+            }
         }
 
         .close:hover,
