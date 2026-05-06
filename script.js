@@ -82,8 +82,14 @@ function isIOS() {
 
     function checkVerificationStatus() {
         const hash = window.location.hash;
-        
-        if (hash.includes('access_token=') && hash.includes('type=signup')) {
+        const params = new URLSearchParams(window.location.search);
+
+        // PKCE flow: Supabase redirects with ?code= or ?verified=true in query string
+        // Implicit flow: access_token in hash fragment
+        const isPKCE = params.has('code') || params.get('verified') === 'true';
+        const isImplicit = hash.includes('access_token=') && hash.includes('type=signup');
+
+        if (isPKCE || isImplicit) {
             modal.style.display = "block";
             
             // Update UI based on device
